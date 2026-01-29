@@ -4,9 +4,7 @@ export class LoginPage {
     constructor(private page: Page) {}
     
     async goto() {
-        await this.page.goto('https://practice.expandtesting.com/login', {
-            waitUntil: 'domcontentloaded'
-        });
+        await this.page.goto('/login');
     }
 
     async login(username: string, password:string) {
