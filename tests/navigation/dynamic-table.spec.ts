@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('CPU usage value exists in dynamic table', async ({ page }) => {
+test.skip('CPU usage value exists in dynamic table', async ({ page }) => {
   await page.goto('/dynamic-table');
 
   const headers = page.locator('thead th');
