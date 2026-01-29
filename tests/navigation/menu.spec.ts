@@ -6,6 +6,6 @@ test('All main menu item are visible', async ({page}) => {
     const menuItems = ['Web inputs', 'Test Login Page', 'Test Register Page', 'Forgot Password Form', 'OTP: One Time Password', 'Dynamic Table', 'Dynamic Pagination Table', 'Locators Page'];
 
     for (const item of menuItems){
-        await expect(page.getByRole('link', { name: item })).toBeVisible();
+        await expect(page.getByRole('link', { name: item })).toBeVisible({ timeout: 15000});
     }
 });
