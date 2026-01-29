@@ -6,9 +6,10 @@ export default defineConfig({
     workers: 1,
     use: {
         baseURL: 'https://practice.expandtesting.com',
-        screenshot: 'only-on-failure',
+        trace: 'off',
+        screenshot: 'off',
         video: 'off',
-        trace: 'off'
+        viewport: null, // use full available screen
     },
     reporter: [['html', { open: 'never' }]],
 })
