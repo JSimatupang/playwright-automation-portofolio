@@ -3,7 +3,7 @@ import { LoginPage } from '../../pages/login.page';
 
 test.describe.serial('Authentication flows', () => {
 
-    test.skip('Login with valid credential', async ({ page }) => {
+    test('Login with valid credential', async ({ page }) => {
         const loginPage = new LoginPage(page);
 
         await loginPage.goto();
@@ -13,7 +13,7 @@ test.describe.serial('Authentication flows', () => {
         await expect(page.locator('a[href="/logout"]')).toBeVisible();
     });
 
-    test.skip('User stays login after page refresh', async ({ page }) => {
+    test('User stays login after page refresh', async ({ page }) => {
         const loginPage = new LoginPage(page);
 
         await loginPage.goto();
@@ -24,7 +24,7 @@ test.describe.serial('Authentication flows', () => {
         await expect(page.locator('a[href="/logout"]')).toBeVisible();
     });
 
-    test.skip('Login fails with invalid password', async ({ page }) => {
+    test('Login fails with invalid password', async ({ page }) => {
         const loginPage = new LoginPage(page)
 
         await loginPage.goto();
